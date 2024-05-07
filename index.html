@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --duration: 20s;
+      }
+      img {
+        display: block;
+        position: absolute;
+        inset: 0;
+      }
+
+      #img1 {
+        z-index: 4;
+        animation: blink1 var(--duration) forwards infinite;
+      }
+
+      #img2 {
+        z-index: 3;
+        animation: blink2 var(--duration) forwards infinite;
+      }
+
+      #img3 {
+        z-index: 2;
+        animation: blink3 var(--duration) forwards infinite;
+      }
+
+      #img4 {
+        z-index: 1;
+        animation: blink4 var(--duration) forwards infinite;
+      }
+
+      @keyframes blink1 {
+        25% {
+          opacity: 1;
+        }
+        26% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes blink2 {
+        0% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 0;
+        }
+
+        26% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 1;
+        }
+
+        51% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes blink3 {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0;
+        }
+
+        51% {
+          opacity: 1;
+        }
+        75% {
+          opacity: 1;
+        }
+        
+        76% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes blink4 {
+        0% {
+          opacity: 0;
+        }
+        75% {
+          opacity: 0;
+        }
+
+        76% {
+          opacity: 1;
+        }
+        99% {
+          opacity: 1;
+        }
+        
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div style="position: relative">
+      <img id="img1" src="240415Category1.webp" alt="" />
+      <img id="img2" src="240415Category2.webp" alt="" />
+      <img id="img3" src="240415Category3.webp" alt="" />
+      <img id="img4" src="240415Category4.webp" alt="" />
+    </div>
+  </body>
+</html>
