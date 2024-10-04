@@ -6,30 +6,29 @@
     <title>Document</title>
     <style>
       :root {
-        --duration: 20s;
-      }
-      img {
-        display: block;
-        position: absolute;
-        inset: 0;
+        --duration: 10s;
       }
 
       #img1 {
+          max-width: 100%;
         z-index: 4;
         animation: blink1 var(--duration) forwards infinite;
       }
 
       #img2 {
+          display: block;
         z-index: 3;
         animation: blink2 var(--duration) forwards infinite;
       }
 
       #img3 {
+          position: absolute;
         z-index: 2;
         animation: blink3 var(--duration) forwards infinite;
       }
 
       #img4 {
+          inset: 0;
         z-index: 1;
         animation: blink4 var(--duration) forwards infinite;
       }
@@ -50,11 +49,11 @@
         0% {
           opacity: 0;
         }
-        25% {
+        24% {
           opacity: 0;
         }
 
-        26% {
+        25% {
           opacity: 1;
         }
         50% {
@@ -73,11 +72,11 @@
         0% {
           opacity: 0;
         }
-        50% {
+        49% {
           opacity: 0;
         }
 
-        51% {
+        50% {
           opacity: 1;
         }
         75% {
@@ -96,25 +95,21 @@
         0% {
           opacity: 0;
         }
-        75% {
+        74% {
           opacity: 0;
         }
 
-        76% {
+        75% {
           opacity: 1;
         }
-        99% {
-          opacity: 1;
-        }
-        
         100% {
-          opacity: 0;
+          opacity: 1;
         }
       }
     </style>
   </head>
   <body>
-    <div style="position: relative">
+    <div style="position: relative;max-width: 650px; aspect-ratio: 65/49;">
       <img id="img1" src="240415Category1.webp" alt="" />
       <img id="img2" src="240415Category2.webp" alt="" />
       <img id="img3" src="240415Category3.webp" alt="" />
